@@ -92,7 +92,7 @@ export default function Portfolio() {
                     Tailwind CSS, allowing me to build responsive and user-friendly interfaces. I focus
                     on delivering seamless user experiences by implementing modern frontend frameworks and
                     best practices in UI/UX design. As a team leader, I have successfully managed developers
-                    and facilitated smooth collaboration. I'm passionate about delivering high-quality web
+                    and facilitated smooth collaboration. I`m passionate about delivering high-quality web
                     solutions and staying current with the latest technologies.
                     </p>
                     <div className="space-y-3">

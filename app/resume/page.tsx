@@ -39,7 +39,7 @@ export default function ResumePage() {
               <li>Developed responsive e-commerce websites for businesses.</li>
               <li>Created a responsive website for a new courier service company.</li>
               <li>Crafted a responsive Tourist Spot Website for Daguioman, Abra Municipality.</li>
-              <li>Developed a complete responsive online jewelry store named "PNGB Precious Ashers."</li>
+              <li>Developed a complete responsive online jewelry store named ``PNGB Precious Ashers.``</li>
               <li>HRIS for a local government.</li>
               <li>HRIS for the BPO company Spillway Workforce Solutions.</li>
             </ul>
@@ -80,7 +80,7 @@ export default function ResumePage() {
               <li>Proactively identified and resolved technical issues related to web development, minimizing downtime and disruptions.</li>
               <li>Implemented robust security measures and adhered to industry best practices to safeguard web applications and user data.</li>
               <li>Conducted thorough code reviews, offering technical guidance, and mentoring junior web developers to facilitate skill development.</li>
-              <li>Played an integral role in strategic planning by aligning web development initiatives with the organization's overarching goals and objectives.</li>
+              <li>Played an integral role in strategic planning by aligning web development initiatives with the organization`s overarching goals and objectives.</li>
               <li>Managed the deployment process, orchestrating the seamless transition of projects from Bitbucket to Laravel Forge, ensuring efficient and reliable web application delivery.</li>
             </ul>
           </div>
@@ -110,9 +110,9 @@ export default function ResumePage() {
             <div className="text-primary mb-2">GFCO Enterprise</div>
             <ul className="list-disc list-inside text-gray-400 space-y-1">
               <li>Proficient full-stack web developer responsible for end-to-end development.</li>
-              <li>Managed the company website's maintenance.</li>
-              <li>Developed a locally hosted system tailored to the company's needs.</li>
-              <li>Designed and resolved bugs on the company's website, resulting in improved user experience.</li>
+              <li>Managed the company website`s maintenance.</li>
+              <li>Developed a locally hosted system tailored to the company`s needs.</li>
+              <li>Designed and resolved bugs on the company`s website, resulting in improved user experience.</li>
               <li>Provided valuable assistance to clients in resolving their system-related issues.</li>
               <li>Significantly enhanced customer satisfaction by 35% through website improvements.</li>
               <li>Conducted troubleshooting and utilized SEO tools to enhance website performance and visibility.</li>

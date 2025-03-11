@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { ExternalLink, Github } from "lucide-react"
+import { ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const projects = [
@@ -75,12 +75,6 @@ export function ProjectsGrid() {
                     Demo
                   </a>
                 </Button>
-                {/* <Button size="sm" variant="outline" asChild>
-                  <a href={project.links.github} target="_blank" rel="noopener noreferrer">
-                    <Github className="w-4 h-4 mr-2" />
-                    Code
-                  </a>
-                </Button> */}
               </div>
             </div>
           </div>
