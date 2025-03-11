@@ -25,8 +25,8 @@ export default function TypingEffect() {
 
     return (
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <h2 className="text-5xl font-semibold text-gray-800">Hi I`m</h2>
-        <h1 className="text-6xl md:text-9xl font-bold uppercase bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent">
+        <h2 className="text-3xl md:text-5xl font-semibold text-gray-800">Hi I`m</h2>
+        <h1 className="text-5xl md:text-9xl font-bold uppercase bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent">
             <span ref={typedRef} className="bg-gradient-to-r from-700 to-gray-900 bg-clip-text text-transparent" />
         </h1>
         </div>

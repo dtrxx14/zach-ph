@@ -88,7 +88,7 @@ export function Skills() {
 
             {/* Tooltip */}
             {activeSkill === skill.name && (
-              <div className="absolute -top-6 left-1/2 -translate-x-1/2 px-3 py-1 text-white text-xs rounded-md whitespace-nowrap z-20">
+              <div className="absolute -top-5 left-1/2 -translate-x-1/2 px-3 py-1 text-white text-xs rounded-md whitespace-nowrap z-20">
                 {skill.name}
               </div>
             )}

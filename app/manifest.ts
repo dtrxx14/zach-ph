@@ -2,21 +2,21 @@ import type { MetadataRoute } from "next"
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "John Doe Portfolio",
-    short_name: "JD Portfolio",
-    description: "Personal portfolio of John Doe, a frontend developer",
+    name: "Zach Yamio Portfolio",
+    short_name: "ZY Portfolio",
+    description: "Personal portfolio of Zach Yamio, a web developer specializing in full-stack development",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
     theme_color: "#000000",
     icons: [
       {
-        src: "/icon-192x192.png",
+        src: "/favicon.png",
         sizes: "192x192",
         type: "image/png",
       },
       {
-        src: "/icon-512x512.png",
+        src: "/favicon.png",
         sizes: "512x512",
         type: "image/png",
       },

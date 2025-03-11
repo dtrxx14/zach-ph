@@ -24,7 +24,7 @@ export function ProgrammingLanguage() {
 
   return (
     <div className="p-4">
-      <div className="grid grid-cols-5 gap-4">
+      <div className="grid grid-cols-4 md:grid-cols-5 gap-4">
         {skills.map((skill) => (
           <div
             key={skill.name}

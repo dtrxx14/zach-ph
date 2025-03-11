@@ -23,9 +23,9 @@ export default function ResumePage() {
           <h2 className="text-xl font-semibold border-b border-gray-800 pb-2 mb-6">Professional Experience</h2>
 
           <div className="mb-8">
-            <div className="flex justify-between items-start mb-2">
+            <div className="md:flex md:justify-between md:items-start mb-2">
               <h3 className="text-lg font-medium">FULL – STACK SYSTEMS DEVELOPER</h3>
-              <span className="text-gray-400 text-sm">Jan 2017 - Present</span>
+              <div className="text-gray-400 text-sm">Jan 2017 - Present</div>
             </div>
             <div className="text-primary mb-2">Freelance</div>
             <ul className="list-disc list-inside text-gray-400 space-y-1">
@@ -46,9 +46,9 @@ export default function ResumePage() {
           </div>
 
           <div className="mb-8">
-            <div className="flex justify-between items-start mb-2">
+            <div className="md:flex md:justify-between md:items-start mb-2">
               <h3 className="text-lg font-medium">SR. SYSTEMS DEVELOPER / IT SUPERVISOR</h3>
-              <span className="text-gray-400 text-sm">Jun 2024 - Dec 2024</span>
+              <div className="text-gray-400 text-sm">Jun 2024 - Dec 2024</div>
             </div>
             <div className="text-primary mb-2">Nephila Web Technology Inc.</div>
             <ul className="list-disc list-inside text-gray-400 space-y-1">
@@ -66,9 +66,9 @@ export default function ResumePage() {
           </div>
 
           <div className="mb-8">
-            <div className="flex justify-between items-start mb-2">
+            <div className="md:flex md:justify-between md:items-start mb-2">
               <h3 className="text-lg font-medium">IT OPERATIONS SUPERVISOR</h3>
-              <span className="text-gray-400 text-sm">Sep 2022 - Jun 2024</span>
+              <div className="text-gray-400 text-sm">Sep 2022 - Jun 2024</div>
             </div>
             <div className="text-primary mb-2">FSI Skyward Logistics Inc.</div>
             <ul className="list-disc list-inside text-gray-400 space-y-1">
@@ -86,9 +86,9 @@ export default function ResumePage() {
           </div>
 
           <div className="mb-8">
-            <div className="flex justify-between items-start mb-2">
+            <div className="md:flex md:justify-between md:items-start mb-2">
               <h3 className="text-lg font-medium">WEB DEVELOPER</h3>
-              <span className="text-gray-400 text-sm">Sep 2021 - Jun 2022</span>
+              <div className="text-gray-400 text-sm">Sep 2021 - Jun 2022</div>
             </div>
             <div className="text-primary mb-2">FSI Enterprise Systems Solution Inc.</div>
             <ul className="list-disc list-inside text-gray-400 space-y-1">
@@ -103,9 +103,9 @@ export default function ResumePage() {
           </div>
 
           <div className="mb-8">
-            <div className="flex justify-between items-start mb-2">
+            <div className="md:flex md:justify-between md:items-start mb-2">
               <h3 className="text-lg font-medium">WEB DEVELOPER</h3>
-              <span className="text-gray-400 text-sm">Oct 2018 - Oct 2020</span>
+              <div className="text-gray-400 text-sm">Oct 2018 - Oct 2020</div>
             </div>
             <div className="text-primary mb-2">GFCO Enterprise</div>
             <ul className="list-disc list-inside text-gray-400 space-y-1">
@@ -126,25 +126,25 @@ export default function ResumePage() {
           <h2 className="text-xl font-semibold border-b border-gray-800 pb-2 mb-6">Education</h2>
 
           <div className="mb-8">
-            <div className="flex justify-between items-start mb-2">
+            <div className="md:flex md:justify-between md:items-start mb-2">
               <h3 className="text-lg font-medium">Bachelor of Science in Information Technology</h3>
-              <span className="text-gray-400 text-sm">2014 - 2018</span>
+              <div className="text-gray-400 text-sm">2014 - 2018</div>
             </div>
             <div className="text-primary">University of Perpetual Help System Dalta - Molino Campus</div>
           </div>
 
           <div className="mb-8">
-            <div className="flex justify-between items-start mb-2">
+            <div className="md:flex md:justify-between md:items-start mb-2">
               <h3 className="text-lg font-medium">High School Diploma</h3>
-              <span className="text-gray-400 text-sm">2009 - 2013</span>
+              <div className="text-gray-400 text-sm">2009 - 2013</div>
             </div>
             <div className="text-primary">Governor Ferrer Memorial National High School - Annex</div>
           </div>
 
           <div className="mb-8">
-            <div className="flex justify-between items-start mb-2">
+            <div className="md:flex md:justify-between md:items-start mb-2">
               <h3 className="text-lg font-medium">Primary Education</h3>
-              <span className="text-gray-400 text-sm">2003 - 2009</span>
+              <div className="text-gray-400 text-sm">2003 - 2009</div>
             </div>
             <div className="text-primary">Imus Pilot Elementary School</div>
           </div>

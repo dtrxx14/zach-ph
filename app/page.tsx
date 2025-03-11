@@ -13,7 +13,7 @@ export default function Portfolio() {
     <div className="min-h-screen bg-[#0d1117] text-white">
       {/* Cover Photo & Profile Section */}
       <div className="relative">
-        <div className="h-[250px] md:h-[400px] w-full relative overflow-hidden bg-gray-200">
+        <div className="h-[200px] md:h-[400px] w-full relative overflow-hidden bg-gray-200">
           <TypingEffect />
         </div>
       </div>
@@ -22,7 +22,7 @@ export default function Portfolio() {
       <div className="relative max-w-7xl mx-auto px-4 py-8 -mt-8">
         {/* Profile Info Container */}
         <div className="max-w-6xl mx-auto px-4">
-          <div className="-mt-8 pb-4 flex items-end justify-between">
+          <div className="-mt-14 md:-mt-8 pb-4 flex items-end justify-between">
             {/* Profile Picture & Name */}
             <div className="flex items-end gap-4">
               <div className="relative">
@@ -36,20 +36,32 @@ export default function Portfolio() {
                   />
                 </div>
               </div>
-              <div className="mb-4">
+              <div className="hidden md:block mb-4">
                 <h1 className="text-3xl font-bold">Zach Yamio</h1>
                 <p className="text-gray-300">1.5K followers · 705 following</p>
               </div>
             </div>
 
             {/* Action Buttons */}
-            <div className="flex gap-2 mb-4 cursor-pointer">
+            <div className="hidden md:flex gap-2 mb-4 cursor-pointer">
               <Link href="/resume" className="cursor-pointer">
                 <Button variant="default" className="cursor-pointer">
                   View Resume
                 </Button>
               </Link>
             </div>
+          </div>
+          <div className="block md:hidden mb-4">
+            <h1 className="text-xl font-bold">Zach Yamio</h1>
+            <p className="text-xs text-gray-300">1.5K followers · 705 following</p>
+          </div>
+
+          <div className="flex md:hidden w-full gap-2 mb-4 cursor-pointer">
+            <Link href="/resume" className="w-full cursor-pointer">
+              <Button variant="default" className="w-full cursor-pointer">
+                View Resume
+              </Button>
+            </Link>
           </div>
 
           {/* Navigation Tabs */}
