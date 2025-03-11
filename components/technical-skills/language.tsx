@@ -34,7 +34,7 @@ export function ProgrammingLanguage() {
           >
             <div
               className={`
-                rounded-lg px-1 py-1 rounded-full text-sm flex items-center justify-center
+                rounded-lg md:px-1 md:py-1 rounded-full text-sm flex items-center justify-center
                 h-12 bg-transparent transition-all duration-300 text-sm font-medium tracking-wider
                 hover:scale-110
             `}

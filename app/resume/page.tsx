@@ -156,23 +156,23 @@ export default function ResumePage() {
           
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <h3 className="font-medium mb-2">Programming Languages</h3>
+              <h3 className="text-sm md:text-base font-medium mb-2">Programming Languages</h3>
               <ProgrammingLanguage />
             </div>
 
             <div>
-              <h3 className="font-medium mb-2">Frameworks & Libraries</h3>
+              <h3 className="text-sm md:text-base font-medium mb-2">Frameworks & Libraries</h3>
               <Framework />
             </div>
 
             <div>
-              <h3 className="font-medium mb-2">Tools & Platforms</h3>
+              <h3 className="text-sm md:text-base font-medium mb-2">Tools & Platforms</h3>
               <ToolsAndPlatform />
             </div>
 
             <div>
-              <h3 className="font-medium mb-2">Other Skills</h3>
-              <ul className="list-disc list-inside text-gray-400 space-y-1">
+              <h3 className="text-sm md:text-base font-medium mb-2">Other Skills</h3>
+              <ul className="text-xs md:text-base list-disc list-inside text-gray-400 space-y-1">
                 <li>Responsive Design</li>
                 <li>Coding Best Practices</li>
                 <li>RESTful APIs</li>
@@ -187,7 +187,7 @@ export default function ResumePage() {
         <section className="mb-12">
           <h2 className="text-xl font-semibold border-b border-gray-800 pb-2 mb-6">Seminars and Certifications</h2>
 
-          <ul className="list-disc list-inside text-gray-400 space-y-2">
+          <ul className="text-xs md:text-base list-disc list-inside text-gray-400 space-y-2">
             <li>16th Youth Congress on Information Technology</li>
             <li>Micro Focus Software University: Application Life Cycle Management Advance Course and LoadRunner 12.0</li>
             <li>TOEIC: Certified Elementary Proficiency in English</li>
@@ -197,12 +197,12 @@ export default function ResumePage() {
 
         {/* Download Button */}
         <div className="flex justify-center mt-12">
-        <a 
-          href="/pdf/zach032025.pdf" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="px-6 py-3 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-colors"
-        >
+          <a 
+            href="/pdf/zach032025.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-full text-center md:w-auto px-6 py-3 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-colors"
+          >
             Download Resume
           </a>
         </div>
