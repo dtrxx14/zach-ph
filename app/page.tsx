@@ -16,7 +16,7 @@ export default function Portfolio() {
   const isBerMonth = month >= 8 && month <= 11; // Sep (8) to Dec (11)
 
   const imageSrc = isBerMonth ? "/images/kumo-hat.png" : "/images/kumo.png";
-  
+
   return (
     <div className="min-h-screen bg-[#0d1117] text-white mb-32">
       {/* Cover Photo & Profile Section */}
@@ -120,8 +120,8 @@ export default function Portfolio() {
                     <h2 className="text-xl font-semibold mb-4">Intro</h2>
                     <div className="text-gray-300 mb-4 text-justify">
                       <div className="mb-2"><strong>8+ years of experience in Systems Development</strong>, specializing in backend technologies and database management. I work with Laravel PHP to build scalable web applications and have a solid foundation in native PHP development. My database expertise includes designing efficient schemas and writing optimized queries in MySQL.</div>
-                      <div className="mb-2">As a team leader, I've successfully managed developers and facilitated smooth collaboration. I'm passionate about delivering high-quality web solutions and staying current with the latest technologies.</div>
-                      <div className="mb-2">Feel free to reach out if you'd like to connect or discuss opportunities!</div>
+                      <div className="mb-2">As a team leader, I`ve successfully managed developers and facilitated smooth collaboration. I`m passionate about delivering high-quality web solutions and staying current with the latest technologies.</div>
+                      <div className="mb-2">Feel free to reach out if you`d like to connect or discuss opportunities!</div>
                     </div>
                     <div className="space-y-3">
                       <div className="flex justify-start items-start gap-2 text-gray-300">
