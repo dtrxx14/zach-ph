@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image"
 import Link from "next/link"
 import { Mail, Phone, Linkedin, MapPin, MoreHorizontal } from "lucide-react"
@@ -9,15 +11,36 @@ import TypingEffect from "@/components/cover-background";
 import { ProjectsGrid } from "@/components/project-grid"
 
 export default function Portfolio() {
+
+  const month = new Date().getMonth(); // 0 = January, 11 = December
+  const isBerMonth = month >= 8 && month <= 11; // Sep (8) to Dec (11)
+
+  const imageSrc = isBerMonth ? "/images/kumo-hat.png" : "/images/kumo.png";
+  
   return (
-    <div className="min-h-screen bg-[#0d1117] text-white">
+    <div className="min-h-screen bg-[#0d1117] text-white mb-32">
       {/* Cover Photo & Profile Section */}
       <div className="relative">
         <div className="h-[200px] md:h-[400px] w-full relative overflow-hidden bg-gray-200">
           <TypingEffect />
         </div>
       </div>
-      <StarsBackground />
+      <StarsBackground/>
+
+      <div className="fixed bottom-6 right-6 animate-bounce cursor-pointer z-50">
+        <Image
+          src={imageSrc}
+          alt="Bouncing Buddy"
+          width={60}
+          height={60}
+          onClick={() => {
+            document
+              .querySelector(".stars-bg")
+              ?.dispatchEvent(new Event("click", { bubbles: true }));
+          }}
+          className="drop-shadow-lg"
+        />
+      </div>
 
       <div className="relative max-w-7xl mx-auto px-4 py-8 -mt-8">
         {/* Profile Info Container */}
@@ -38,7 +61,7 @@ export default function Portfolio() {
               </div>
               <div className="hidden md:block mb-4">
                 <h1 className="text-3xl font-bold">Zach Yamio</h1>
-                <p className="text-gray-300">1.5K followers · 705 following</p>
+                <p className="text-gray-300">1.8K followers · 705 following</p>
               </div>
             </div>
 
@@ -53,7 +76,7 @@ export default function Portfolio() {
           </div>
           <div className="block md:hidden mb-4">
             <h1 className="text-xl font-bold">Zach Yamio</h1>
-            <p className="text-xs text-gray-300">1.5K followers · 705 following</p>
+            <p className="text-xs text-gray-300">1.8K followers · 705 following</p>
           </div>
 
           <div className="flex md:hidden w-full gap-2 mb-4 cursor-pointer">
@@ -95,21 +118,14 @@ export default function Portfolio() {
                   {/* Intro Card */}
                   <div className="bg-gray-900/50 rounded-lg p-4">
                     <h2 className="text-xl font-semibold mb-4">Intro</h2>
-                    <p className="text-gray-300 mb-4 text-justify">
-                    <strong>7+ years of experience in Systems Development</strong>, specializing in backend technologies and
-                    database management. I work with Laravel PHP to build scalable web applications
-                    and have a solid foundation in native PHP development. My database expertise includes
-                    designing efficient schemas and writing optimized queries in MySQL. On the frontend,
-                    I have strong proficiency in JQuery, VueJS, JavaScript, HTML5, CSS3, Bootstrap 5 or
-                    Tailwind CSS, allowing me to build responsive and user-friendly interfaces. I focus
-                    on delivering seamless user experiences by implementing modern frontend frameworks and
-                    best practices in UI/UX design. As a team leader, I have successfully managed developers
-                    and facilitated smooth collaboration. I`m passionate about delivering high-quality web
-                    solutions and staying current with the latest technologies.
-                    </p>
+                    <div className="text-gray-300 mb-4 text-justify">
+                      <div className="mb-2"><strong>8+ years of experience in Systems Development</strong>, specializing in backend technologies and database management. I work with Laravel PHP to build scalable web applications and have a solid foundation in native PHP development. My database expertise includes designing efficient schemas and writing optimized queries in MySQL.</div>
+                      <div className="mb-2">As a team leader, I've successfully managed developers and facilitated smooth collaboration. I'm passionate about delivering high-quality web solutions and staying current with the latest technologies.</div>
+                      <div className="mb-2">Feel free to reach out if you'd like to connect or discuss opportunities!</div>
+                    </div>
                     <div className="space-y-3">
-                      <div className="flex justify-start items-center gap-2 text-gray-300">
-                        <MapPin className="w-5 h-5" />
+                      <div className="flex justify-start items-start gap-2 text-gray-300">
+                        <MapPin className="w-5 h-5 mt-1" />
                         <a target="_blank" href="https://www.google.com/maps/place/0091+Andres+Bijasa+Road,+San+Jose+del+Monte+City,+3023+Bulacan/data=!4m2!3m1!1s0x3397afbdc9896883:0xca2c0195da072d0d?sa=X&ved=1t:242&ictx=111">
                           Brgy Gaya-Gaya, SJDM, Bulacan, 3023
                         </a>
@@ -139,6 +155,9 @@ export default function Portfolio() {
                 {/* Right Column - Latest Projects */}
                 <div className="md:col-span-2 space-y-6">
                   <h2 className="text-xl font-semibold mb-4">Latest Projects</h2>
+                  <div className="p-4 mb-4 text-sm text-gray-800 rounded-lg bg-yellow-50 border border-yellow-200 dark:bg-gray-800 dark:text-gray-300 dark:border-yellow-700 sticky top-5 z-20 md:static" role="alert" >
+                    🚧 This section is under maintenance. All completed projects will be presented during meetings.
+                  </div>
                   {[1, 2, 3].map((project) => (
                     <div key={project} className="bg-gray-900/50 rounded-lg overflow-hidden">
                       <div className="p-4">

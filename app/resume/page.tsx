@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
 import { StarsBackground } from "@/components/stars-background"
 import { ProgrammingLanguage } from "@/components/technical-skills/language"
@@ -7,9 +10,32 @@ import { ToolsAndPlatform } from "@/components/technical-skills/tool"
 
 
 export default function ResumePage() {
+
+  const month = new Date().getMonth(); // 0 = January, 11 = December
+  const isBerMonth = month >= 8 && month <= 11; // Sep (8) to Dec (11)
+
+  const imageSrc = isBerMonth ? "/images/kumo-hat.png" : "/images/kumo.png";
+
+
   return (
     <div className="min-h-screen bg-[#0d1117] text-white">
       <StarsBackground />
+
+      <div className="fixed bottom-6 right-6 animate-bounce cursor-pointer z-50">
+        <Image
+          src={imageSrc}
+          alt="Bouncing Buddy"
+          width={60}
+          height={60}
+          onClick={() => {
+            document
+              .querySelector(".stars-bg")
+              ?.dispatchEvent(new Event("click", { bubbles: true }));
+          }}
+          className="drop-shadow-lg"
+        />
+      </div>
+
       <div className="relative max-w-3xl mx-auto px-4 py-8">
         <Link href="/" className="inline-flex items-center text-gray-400 hover:text-white mb-8">
           <ArrowLeft className="mr-2" size={16} />
@@ -188,6 +214,12 @@ export default function ResumePage() {
           <h2 className="text-xl font-semibold border-b border-gray-800 pb-2 mb-6">Seminars and Certifications</h2>
 
           <ul className="text-xs md:text-base list-disc list-inside text-gray-400 space-y-2">
+            <li>
+              <a href="https://www.linkedin.com/in/zach-yamio-855139171/overlay/1755018687195/single-media-viewer/?profileId=ACoAACjG0IEBKTxcyipChtuKGfQ8iLCYCNAICiA" target="_blank">AWS SimuLearn: Cloud Practitioner</a>
+            </li>
+            <li>
+              <a href="https://skillshop.credential.net/b5ed324d-30ca-4043-a253-89692af89580" target="_blank">Google Analytics Certification</a>
+            </li>
             <li>16th Youth Congress on Information Technology</li>
             <li>Micro Focus Software University: Application Life Cycle Management Advance Course and LoadRunner 12.0</li>
             <li>TOEIC: Certified Elementary Proficiency in English</li>
@@ -198,7 +230,7 @@ export default function ResumePage() {
         {/* Download Button */}
         <div className="flex justify-center mt-12">
           <a 
-            href="/pdf/zach032025.pdf" 
+            href="/pdf/Zach_Yamio_Resume_2025-09-05.pdf" 
             target="_blank" 
             rel="noopener noreferrer"
             className="w-full text-center md:w-auto px-6 py-3 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-colors"

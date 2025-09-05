@@ -31,15 +31,32 @@ export function StarsBackground() {
       moveX: "0px",
       moveY: "0px",
       shootDuration: "1s",
-      opacity: 1, // Default opacity
+      opacity: 1,
     }));
     setStars(generatedStars);
+  }, []);
+
+  // ⭐ Random auto-trigger
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+
+    const scheduleNext = () => {
+      const delay = Math.floor(Math.random() * 5000) + 10000; // 10–30 secs
+      timer = setTimeout(() => {
+        handleClick();
+        scheduleNext(); // Schedule again after firing
+      }, delay);
+    };
+
+    scheduleNext();
+
+    return () => clearTimeout(timer); // Cleanup on unmount
   }, []);
 
   const handleClick = () => {
     setStars((prevStars) => {
       const newStars = [...prevStars];
-      const shootingCount = Math.floor(Math.random() * 4) + 2; // 2 to 5 stars
+      const shootingCount = Math.floor(Math.random() * 4) + 2; // 2–5 stars
       const randomIndexes = new Set<number>();
 
       while (randomIndexes.size < shootingCount) {
@@ -47,30 +64,25 @@ export function StarsBackground() {
       }
 
       randomIndexes.forEach((index) => {
-        const shootDuration = `${Math.random() * 8 + 2}s`; // Random speed between 2s and 10s
+        const shootDuration = `${Math.random() * 8 + 2}s`;
 
         newStars[index] = {
           ...newStars[index],
           isShooting: true,
-          moveX: `${Math.random() * 1200 - 300}px`, // Move further left or right
-          moveY: `${Math.random() * 800 + 200}px`, // Move further downward
+          moveX: `${Math.random() * 1200 - 300}px`,
+          moveY: `${Math.random() * 800 + 200}px`,
           shootDuration,
-          opacity: 1, // Start fully visible
+          opacity: 1,
         };
 
-        // Step 1: Start fading out after most of the shooting duration
         setTimeout(() => {
           setStars((currentStars) => {
             const updatedStars = [...currentStars];
-            updatedStars[index] = {
-              ...updatedStars[index],
-              opacity: 0, // Fade out
-            };
+            updatedStars[index] = { ...updatedStars[index], opacity: 0 };
             return updatedStars;
           });
-        }, parseFloat(shootDuration) * 800); // Fade out before disappearing
+        }, parseFloat(shootDuration) * 800);
 
-        // Step 2: Remove the star completely after it fades out, then respawn at a new location
         setTimeout(() => {
           setStars((currentStars) => {
             const updatedStars = [...currentStars];
@@ -85,11 +97,11 @@ export function StarsBackground() {
               moveX: "0px",
               moveY: "0px",
               shootDuration: "1s",
-              opacity: 1, // Reset opacity
+              opacity: 1,
             };
             return updatedStars;
           });
-        }, parseFloat(shootDuration) * 1000); // Reset after full shooting duration
+        }, parseFloat(shootDuration) * 1000);
       });
 
       return [...newStars];
@@ -97,7 +109,10 @@ export function StarsBackground() {
   };
 
   return (
-    <div className="fixed inset-0 z-0 pointer-events-auto overflow-hidden" onClick={handleClick}>
+    <div
+      className="stars-bg fixed inset-0 z-0 pointer-events-auto overflow-hidden"
+      onClick={handleClick}
+    >
       {stars.map((star) => (
         <div
           key={star.id}
@@ -115,7 +130,7 @@ export function StarsBackground() {
               : "",
             animationDuration: star.duration,
             animationDelay: star.delay,
-            opacity: star.opacity, // Controls fade-out
+            opacity: star.opacity,
           }}
         />
       ))}
