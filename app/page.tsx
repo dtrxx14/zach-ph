@@ -248,6 +248,9 @@ export default function Portfolio() {
             <TabsContent value="contact" className="mt-8">
               <div className="max-w-2xl mx-auto">
                 <div className="bg-gray-900/50 rounded-lg p-6">
+                  <div className="p-4 mb-4 text-sm text-gray-800 rounded-lg bg-yellow-50 border border-yellow-200 dark:bg-gray-800 dark:text-gray-300 dark:border-yellow-700 sticky top-5 z-20 md:static" role="alert" >
+                    🚧 This section is under maintenance. For inquiries, please reach out using the contact information provided.
+                  </div>
                   <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
                   <p className="text-gray-300 mb-6">
                     Feel free to reach out if you would like to collaborate on a project or just want to connect.
@@ -283,7 +286,7 @@ export default function Portfolio() {
                         className="w-full px-3 py-2 bg-gray-800 rounded-md border border-gray-700 focus:outline-none focus:border-gray-500"
                       ></textarea>
                     </div>
-                    <Button type="submit" className="w-full">
+                    <Button className="w-full">
                       Send Message
                     </Button>
                   </form>
